@@ -62,24 +62,27 @@
 #2	\hspace{36pt}	#3	\hspace{36pt}	#4\\ 
 #5  }}}				%layout for personal infomation (topbox)
 
- \newcommand{\sepl}{\textcolor{pic}{\rule{\linewidth}{0.6mm}}}		%seperation line for each box
+ \newcommand{\sepl}{\par\noindent\textcolor{pic}{\rule{\linewidth}{0.6mm}}}		%seperation line for each box
 
 %--------------------------------------------------------------------------------------------------------------
 
 %page layout below personal infomation box
-\newcommand{\binfo}{  \par\noindent\colorbox{white}{\begin{minipage}[t][0.929\textheight]{0.33\textwidth}
+\newcommand{\binfo}{  \par\noindent\colorbox{back2}{\begin{minipage}[t][0.935\textheight]{0.33\textwidth}
+
+\begin{itemize}
+\item Language
+Mandarin, Cantonese
 
 
-
+\item Skill
+\end{itemize}
 
 
 \end{minipage}}%
 %
-\setlength{\linewidth}{0.3mm}
-\vline
-\hspace{2pt}
+\textcolor{pic}{\vline width 0.6mm}
+\hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
-
 
 	
 \end{minipage}%   
