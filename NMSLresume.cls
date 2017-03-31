@@ -7,6 +7,7 @@
 \RequirePackage{marvosym}		% Telephone, email icon
 \RequirePackage{tikz}				% drawing package
 \RequirePackage{ragged2e}		% text alignment
+\RequirePackage{enumerate}		%leftbar arrangement
 \RequirePackage[absolute]{textpos}			%box absolute position
 \usetikzlibrary{shapes}
 \usetikzlibrary{decorations}
@@ -68,14 +69,9 @@
 
 %page layout below personal infomation box
 \newcommand{\binfo}{  \par\noindent\colorbox{back2}{\begin{minipage}[t][0.935\textheight]{0.33\textwidth}
+\linespread{2}
+\pbox[b]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
 
-\begin{itemize}
-\item Language
-Mandarin, Cantonese
-
-
-\item Skill
-\end{itemize}
 
 
 \end{minipage}}%
@@ -88,7 +84,10 @@ Mandarin, Cantonese
 \end{minipage}%   
 }
 
+\newcommand{\lan}[1]{\begin{large}  \fontfamily{lmr}\bfseries{\textsc{#1}}  \end{large}}
 
-
-
+\newcommand{\reprogram}[1]{\centering
+\linespread{0.8}
+\fontfamily{pcr}\bfseries\textsc{ #1}}
+									
 
