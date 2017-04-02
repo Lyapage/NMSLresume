@@ -7,6 +7,7 @@
 \RequirePackage{marvosym}		% Telephone, email icon
 \RequirePackage{tikz}				% drawing package
 \RequirePackage{ragged2e}		% text alignment
+\RequirePackage{pgffor}			%foreach useage
 \RequirePackage{enumerate}		%leftbar arrangement
 \RequirePackage[absolute]{textpos}			%box absolute position
 \usetikzlibrary{shapes}
@@ -44,7 +45,8 @@
 \definecolor{back2}{HTML}{DCDCDC}			%background color for leftbox{skills, self-asscessment, major}
 \definecolor{back3}{HTML}{F8F8FF}			%background color for rightbox{education,experience, projects}
 \definecolor{pic}{HTML}{000080}				%''Navy'' adopted here to express color of name and icons					
-
+\definecolor{mainblue}{HTML}{0E5484}		%skill bar color fill
+\definecolor{maingray}{HTML}{B9B9B9}		%skill bar color draw
 
 %information showed in topbox
 \newcommand{\rename}[1]{  \begin{large} \fontfamily{pcr}{\itshape{\textbf{#1}}} \end{large} }	%resume name
@@ -69,8 +71,12 @@
 
 %page layout below personal infomation box
 \newcommand{\binfo}{  \par\noindent\colorbox{back2}{\begin{minipage}[t][0.935\textheight]{0.33\textwidth}
-\linespread{2}
-\pbox[b]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
+
+\pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
+
+\subsection{Language:}
+
+\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/5}}
 
 
 
@@ -80,7 +86,8 @@
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
 
-	
+
+		
 \end{minipage}%   
 }
 
@@ -90,4 +97,28 @@
 \linespread{0.8}
 \fontfamily{pcr}\bfseries\textsc{ #1}}
 									
+%--------------------------------------------------------------------------------------------------------------					
+\renewcommand{\subsection}[1]{
+\vspace{8pt}\hspace{6pt}%
+\begin{large} \fontfamily{pcr}\bfseries\textup{#1} \end{large}%
+\vspace{4pt}%
+}
 
+%--------------------------------------------------------------------------------------------------------------
+%to design style for x in next part
+\newcommand{\barx}[1]{
+\fontfamily{pcr}\textsc{#1}
+}
+
+%bar graph to represent the ability in language
+\newcommand{\lanskill}[1]{
+\hspace{6pt}
+\begin{tikzpicture}
+\foreach [count = \i] \x/\y in {#1}
+{
+	\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+	\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+	\node [above right ] at (0,\i+0.4) {\barx{\x}};
+}
+\end{tikzpicture}
+}
