@@ -50,6 +50,8 @@
 \definecolor{mainblue}{HTML}{0E5484}		%skill bar color fill
 \definecolor{maingray}{HTML}{B9B9B9}		%skill bar color draw
 \definecolor{mm}{HTML}{1A5276}			%background color for mind map of chemical engineering
+\definecolor{mg}{HTML}{45B39D}				%color box for mechanical graph
+\definecolor{tg}{HTML}{CD5C5C}				%color for typography background color
 
 
 %Define color for each programming language in tikz environment 
@@ -90,25 +92,32 @@
 \pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
 
 \subsection{Language:}
+\par\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/5}}
 
-\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/5}}
-
-\subsection{Programming languages:}
-
+\subsection{Programming languages: }
 \par\hspace{14pt}\langraph
 
-\subsection{Chemical engineering :}
-\par\hspace{12pt}\chegraph{Aspen ONE}{Aspen\\Plus}{Aspen HYSYS}{Aspen Energy Analyzer}
+\subsection{Chemical engineering: }
+\par\hspace{6pt}\chegraph{Aspen ONE}{Aspen\\Plus}{Aspen HYSYS}{Aspen Energy Analyzer}
+\par\vspace{6pt}\hspace{6pt} \colorbox{mm}{   \fontfamily{pcr}\bfseries{\textcolor{white}{Piping system-AutoCAD Plant 3D}}}
 
 \subsection{Mechanical engineering:}
+\par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{AutoCAD}
 
-\subsection{Visual effect:}
+\subsection{Typography:}
+\par\typograph{{MS Office/Latex/4.5}}
+
+\subsection{Computer graphics:}
 
 \end{minipage}}%
 %
 \textcolor{pic}{\vline width 0.6mm}
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
+	
+	
+	
+	
 	
 		
 \end{minipage}%   
@@ -177,6 +186,7 @@
 	\draw (285:2cm) node[right] {\fontfamily{pcr}\textup{PHP/HTML}};
 	\draw (330:2.2cm) node[left] {\fontfamily{pcr}\textup{Java}};
 	\draw (355:2.2cm) node[below] {\fontfamily{pcr}\textup{Others}};
+	
 	\end{scope}
 	
 \end{tikzpicture}
@@ -185,12 +195,45 @@
 %Chemical engineering mind map
 \newcommand{\chegraph}[4]{
 \scalebox{0.7}{
-\tikz 
+\begin{tikzpicture}
 	[root concept/.append style={concept color=mm,text = white}, 
 	level 1 concept/.append style={concept color=mm}, mindmap] 
-	\node [concept] { \huge\fontfamily{pcr}\textup{#1} } 
-		child[grow=30] {node[concept] { \large\fontfamily{pcr}\textup{#2} } } 
-		child[grow=0 ] {node[concept] { \large\fontfamily{pcr}\textup{#3} } }
-		child[grow = -30] {node[concept] { \large\fontfamily{pcr}\textup{#4} } };
+	\node [concept] {   \huge\fontfamily{pcr}\textbf{#1} } 
+		child[grow=30] {node[concept] { \large\fontfamily{pcr}\textbf{#2} } } 
+		child[grow=0 ] {node[concept] { \large\fontfamily{pcr}\textbf{#3} } }
+		child[grow = -30] {node[concept] { \large\fontfamily{pcr}\textbf{#4} } };
+\end{tikzpicture}
+
 }
 }
+
+%--------------------------------------------------------------------------------------------------------------
+%mechanical engineering graph
+\newcommand{\megraph}[3]{
+\begin{tikzpicture}
+	
+	\node[rectangle][draw = mg,very thick,fill = back2] at (0,0){\fontfamily{pcr}\slshape{#1}};
+	\node[rectangle][draw = mg,very thick,fill = back2] at (-0.33, -.7) {\fontfamily{pcr}\slshape{#2}};
+	\node[rectangle][draw = mg,very thick,fill = back2] at (-1.05,-1.4) {\fontfamily{pcr}\slshape{#3}};
+	
+\end{tikzpicture}
+}
+
+%--------------------------------------------------------------------------------------------------------------
+% usage of latex and Microsoft Office:
+\newcommand{\typograph}[1]{
+\hspace{6pt}
+\begin{tikzpicture}
+\foreach [count = \i] \z/\x/\y in {#1}
+{
+	\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+	\draw[fill=white,tg](0,\i) rectangle (\y,\i+0.4);
+	\node [above right ] at (0,\i+0.4) {\barx{\x}};
+	\node[above left] at (6.7,\i+0.4) {\barx{\z}};
+}
+\end{tikzpicture}
+}
+
+%--------------------------------------------------------------------------------------------------------------
+% Computer graphics:
+
