@@ -7,10 +7,12 @@
 \RequirePackage{marvosym}		% Telephone, email icon
 \RequirePackage{tikz}				% drawing package
 \RequirePackage{ragged2e}		% text alignment
-\RequirePackage{pgffor}			%foreach useage
+\RequirePackage{pgffor}			%for-each usage
 \RequirePackage{enumerate}		%leftbar arrangement
 \RequirePackage[absolute]{textpos}			%box absolute position
 \usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{mindmap}
 \usetikzlibrary{decorations}
 \usetikzlibrary{positioning}
 \RequirePackage{geometry} 		% define a4 paper geometry
@@ -41,12 +43,24 @@
 %--------------------------------------------------------------------------------------------------------------
 %Define colors:
 
-\definecolor{back1}{HTML}{FFFFF0}			%background color for topbox(personal infomation)
-\definecolor{back2}{HTML}{DCDCDC}			%background color for leftbox{skills, self-asscessment, major}
-\definecolor{back3}{HTML}{F8F8FF}			%background color for rightbox{education,experience, projects}
+\definecolor{back1}{HTML}{FFFFF0}			%background color for top box(personal information)
+\definecolor{back2}{HTML}{DCDCDC}			%background color for left box{skills, self-assessment, major}
+\definecolor{back3}{HTML}{F8F8FF}			%background color for right box{education,experience, projects}
 \definecolor{pic}{HTML}{000080}				%''Navy'' adopted here to express color of name and icons					
 \definecolor{mainblue}{HTML}{0E5484}		%skill bar color fill
 \definecolor{maingray}{HTML}{B9B9B9}		%skill bar color draw
+
+
+%Define color for each programming language in tikz environment 
+\definecolor{plc1}{HTML}{B22222}						%color for matlab section
+\definecolor{plc2}{HTML}{9400D3}						%color for python section
+\definecolor{plc3}{HTML}{F0E68C}						%color for C++
+\definecolor{plc4}{HTML}{FF6347}						%PHP\HTML
+\definecolor{plc5}{HTML}{9ACD32}							%Java
+\definecolor{plc6}{HTML}{7CFC00}						%assembly language
+
+
+
 
 %information showed in topbox
 \newcommand{\rename}[1]{  \begin{large} \fontfamily{pcr}{\itshape{\textbf{#1}}} \end{large} }	%resume name
@@ -57,19 +71,19 @@
 
 \newcommand{\rephone}[1]{ \Mobilefone:\fontfamily{pcr}\itshape{#1} }							%resume phone number
 
-\newcommand{\rewebsite}[1]{ \Mundus:\fontfamily{pcr}\itshape{#1}  }							%resume perssonal website
+\newcommand{\rewebsite}[1]{ \Mundus:\fontfamily{pcr}\itshape{#1}  }							%resume personal website
 
 					
 \newcommand{\pinfo}[5]{\par\noindent\colorbox{back2}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\vspace{6pt}
 \centering #1 \\ 
 #2	\hspace{36pt}	#3	\hspace{36pt}	#4\\ 
-#5  }}}				%layout for personal infomation (topbox)
+#5  }}}				%layout for personal information (top box)
 
- \newcommand{\sepl}{\par\noindent\textcolor{pic}{\rule{\linewidth}{0.6mm}}}		%seperation line for each box
+ \newcommand{\sepl}{\par\noindent\textcolor{pic}{\rule{\linewidth}{0.6mm}}}		%separation line for each box
 
 %--------------------------------------------------------------------------------------------------------------
 
-%page layout below personal infomation box
+%page layout below personal information box
 \newcommand{\binfo}{  \par\noindent\colorbox{back2}{\begin{minipage}[t][0.935\textheight]{0.33\textwidth}
 
 \pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
@@ -78,7 +92,15 @@
 
 \lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/5}}
 
+\subsection{Programming languages:}
 
+\par\hspace{14pt}\langraph
+
+\subsection{Chemical engineering :}
+
+\subsection{Mechanical engineering:}
+
+\subsection{Visual effect:}
 
 \end{minipage}}%
 %
@@ -88,14 +110,20 @@
 
 
 		
+		
+		
+		
 \end{minipage}%   
 }
 
-\newcommand{\lan}[1]{\begin{large}  \fontfamily{lmr}\bfseries{\textsc{#1}}  \end{large}}
+
 
 \newcommand{\reprogram}[1]{\centering
+\begin{large}
 \linespread{0.8}
-\fontfamily{pcr}\bfseries\textsc{ #1}}
+\fontfamily{pcr}\bfseries\textsc{ #1}
+\end{large}
+}
 									
 %--------------------------------------------------------------------------------------------------------------					
 \renewcommand{\subsection}[1]{
@@ -107,7 +135,7 @@
 %--------------------------------------------------------------------------------------------------------------
 %to design style for x in next part
 \newcommand{\barx}[1]{
-\fontfamily{pcr}\textsc{#1}
+\fontfamily{pcr}\textmd{#1}
 }
 
 %bar graph to represent the ability in language
@@ -122,3 +150,38 @@
 }
 \end{tikzpicture}
 }
+
+%--------------------------------------------------------------------------------------------------------------
+%diagram for programming language:
+\newcommand{\langraph}{
+\begin{tikzpicture}
+	
+	\begin{scope}[line width = 4mm,rotate=270]
+	\draw[plc1]		(0:2cm) arc (0:90:2cm);
+	\draw[plc2]		(90:2cm) arc (90:162:2cm);
+	\draw[plc3]		(162:2cm) arc (162:270:2cm);
+	\draw[plc4]		(270:2cm) arc (270:306:2cm);
+	\draw[plc5]		(306:2cm) arc (306:342:2cm);
+	\draw[plc6]		(342:2cm) arc (342:360:2cm);
+
+	
+	\newcount\mycount
+    \foreach \angle in {0,72,...,3599}
+    {
+      \mycount=\angle\relax
+      \divide\mycount by 10\relax
+      \draw[black!15,thick] (\the\mycount:18mm) -- (\the\mycount:22mm);
+    }
+    
+    	\draw (45:2.2cm) node[right] {\fontfamily{pcr}\textup{Matlab}}; 
+	\draw (126:2.2cm) node[right] {\fontfamily{pcr}\textup{Python}};
+	\draw (216:2.2cm) node[left] {\fontfamily{pcr}\textup{C++}};
+	\draw (285:2cm) node[right] {\fontfamily{pcr}\textup{PHP/HTML}};
+	\draw (330:2.2cm) node[left] {\fontfamily{pcr}\textup{Java}};
+	\draw (355:2.2cm) node[below] {\fontfamily{pcr}\textup{Others}};
+	\end{scope}
+	
+\end{tikzpicture}
+}
+%--------------------------------------------------------------------------------------------------------------
+%Chemical engineering mindmap
