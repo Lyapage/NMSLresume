@@ -49,6 +49,7 @@
 \definecolor{pic}{HTML}{000080}				%''Navy'' adopted here to express color of name and icons					
 \definecolor{mainblue}{HTML}{0E5484}		%skill bar color fill
 \definecolor{maingray}{HTML}{B9B9B9}		%skill bar color draw
+\definecolor{mm}{HTML}{1A5276}			%background color for mind map of chemical engineering
 
 
 %Define color for each programming language in tikz environment 
@@ -57,7 +58,7 @@
 \definecolor{plc3}{HTML}{F0E68C}						%color for C++
 \definecolor{plc4}{HTML}{FF6347}						%PHP\HTML
 \definecolor{plc5}{HTML}{9ACD32}							%Java
-\definecolor{plc6}{HTML}{7CFC00}						%assembly language
+\definecolor{plc6}{HTML}{4A235A}						%assembly language
 
 
 
@@ -97,6 +98,7 @@
 \par\hspace{14pt}\langraph
 
 \subsection{Chemical engineering :}
+\par\hspace{12pt}\chegraph{Aspen ONE}{Aspen\\Plus}{Aspen HYSYS}{Aspen Energy Analyzer}
 
 \subsection{Mechanical engineering:}
 
@@ -107,11 +109,7 @@
 \textcolor{pic}{\vline width 0.6mm}
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
-
-
-		
-		
-		
+	
 		
 \end{minipage}%   
 }
@@ -184,4 +182,15 @@
 \end{tikzpicture}
 }
 %--------------------------------------------------------------------------------------------------------------
-%Chemical engineering mindmap
+%Chemical engineering mind map
+\newcommand{\chegraph}[4]{
+\scalebox{0.7}{
+\tikz 
+	[root concept/.append style={concept color=mm,text = white}, 
+	level 1 concept/.append style={concept color=mm}, mindmap] 
+	\node [concept] { \huge\fontfamily{pcr}\textup{#1} } 
+		child[grow=30] {node[concept] { \large\fontfamily{pcr}\textup{#2} } } 
+		child[grow=0 ] {node[concept] { \large\fontfamily{pcr}\textup{#3} } }
+		child[grow = -30] {node[concept] { \large\fontfamily{pcr}\textup{#4} } };
+}
+}
