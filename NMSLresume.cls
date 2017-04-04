@@ -4,6 +4,7 @@
 %--------------------------------------------------------------------------------------------------------------
 %Required Package: 
 
+\RequirePackage{hyperref}		%add links from github
 \RequirePackage{tcolorbox}		%shape used in section
 \RequirePackage{amsmath}		%describing some math models
 \RequirePackage{marvosym}		% Telephone, email icon
@@ -143,15 +144,21 @@
 		{B.S University of Science and Technology of China}
 		{Majoring in chemistry and chemical engineering}
 		{Hefei, China}
-\end{edu}
+	\end{edu}
 	
 	
 	\vspace{-32pt}
 	\section{Experience}
-	
-	
+	\vspace{-6pt}
+	\expr{2016}{Intern Engineer}{SINOPEC Group}{Puguang China}
+	{Being familiar with the transmission process of the project Sichuan-Shanghai gas pipeline thoroughly. }
+	\expr{2013}{Team member}{Chemitech}{Changzhou China}
+	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Served as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, writing of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.  }
+
+	\vspace{-22pt}
 	\section{Projects}
-		
+
+	
 \end{minipage}%   
 }
 
@@ -313,7 +320,6 @@
 }
 
 \newcommand{\edut}[1]{\fontfamily{pcr}\textup{#1}}
-
 \newcommand{\eduitem}[4]{%
   \hspace{5pt}\edut{#1}
   \hspace{0.5cm} \parbox[t]{11cm}{\edut{\textbf{#2}}
@@ -321,5 +327,13 @@
   \newline \edut{#4}
   \newline
   }\\}
+
+%--------------------------------------------------------------------------------------------------------------
+\newcommand{\expt}[1]{\fontfamily{pcr}\textup{#1}}
+\newcommand{\expr}[5]{
+	\par%
+ \textbf{ \expt{#1},\expt{#2},\expt{#3},\expt{#4} } 
+ \par\hspace{5pt}\parbox[t]{13cm}{ \expt{#5} } \newline
+ }
 
 
