@@ -122,17 +122,31 @@
 \textcolor{pic}{\vline width 0.6mm}
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
-	\vspace{-24pt}
+	\vspace{-26pt}
 	\section{Interests}
 	\vspace{-6pt}
 	\interest{Simulation of chemical manufacturing process }
 	{Controlling system of chemical process equipment, UAV}
-	{Algorithm of computer vision with OpenCV}
+	{Algorithm of computer vision, computing aesthetics}
 
-	\vspace{-19pt}
+	\vspace{-18pt}
 	\section{Education}
-
 	
+	\begin{edu}
+	\eduitem
+		{2015-2017}
+		{M.S The George Washington University}
+		{Specializing in design of mechanical system}
+		{Washington DC, USA}
+	\eduitem
+		{2011-2015}
+		{B.S University of Science and Technology of China}
+		{Majoring in chemistry and chemical engineering}
+		{Hefei, China}
+\end{edu}
+	
+	
+	\vspace{-32pt}
 	\section{Experience}
 	
 	
@@ -274,7 +288,7 @@
 }
 \newcommand{\secbox}[1]{
 \begin{tcolorbox}[colframe=mainblue,colback = back2,boxrule=2pt,arc=4pt,
-      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,hbox]
+      left=2pt,right=2pt,top=2pt,bottom=2pt,boxsep=0pt,hbox]
   	#1
   \end{tcolorbox}
 }
@@ -288,4 +302,24 @@
 	\par \hspace{6pt} \textbullet \hspace{1pt} \fontfamily{pcr}\textup{#3}	
 
 }
+
+%--------------------------------------------------------------------------------------------------------------
+% new an education environment:
+\setlength{\tabcolsep}{0pt}
+\newenvironment{edu}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+
+\newcommand{\edut}[1]{\fontfamily{pcr}\textup{#1}}
+
+\newcommand{\eduitem}[4]{%
+  \hspace{5pt}\edut{#1}
+  \hspace{0.5cm} \parbox[t]{11cm}{\edut{\textbf{#2}}
+  \newline \edut{#3}
+  \newline \edut{#4}
+  \newline
+  }\\}
+
 
