@@ -1,5 +1,5 @@
 \ProvidesClass{NMSLresume}[03/25/2017 resume class] 
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 \NeedsTeXFormat{LaTeX2e}
 %--------------------------------------------------------------------------------------------------------------
 %Required Package: 
@@ -104,10 +104,16 @@
 \subsection{Mechanical engineering:}
 \par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{AutoCAD}
 
-\subsection{Typography:}
-\par\typograph{{MS Office/Latex/4.5}}
+\subsection{Typography/Documents:}
+\par\typograph{{MS Word/Latex/4.5}}
+
 
 \subsection{Computer graphics:}
+\par\hspace{6pt}\comgraph{Autodesk 3ds Max}{Adobe Illustrator}
+
+\subsection{Other tools:}
+\par\hspace{6pt} \fontfamily{pcr}\textup{VB /  Excel / PowerPoint}
+\par\hspace{6pt} \fontfamily{pcr}\textup{Mathematica / After Effects }
 
 \end{minipage}}%
 %
@@ -212,9 +218,9 @@
 \newcommand{\megraph}[3]{
 \begin{tikzpicture}
 	
-	\node[rectangle][draw = mg,very thick,fill = back2] at (0,0){\fontfamily{pcr}\slshape{#1}};
-	\node[rectangle][draw = mg,very thick,fill = back2] at (-0.33, -.7) {\fontfamily{pcr}\slshape{#2}};
-	\node[rectangle][draw = mg,very thick,fill = back2] at (-1.05,-1.4) {\fontfamily{pcr}\slshape{#3}};
+	\node[rectangle][draw = mg,very thick,fill = back1] at (0,0){\fontfamily{pcr}\slshape\bfseries{#1}};
+	\node[rectangle][draw = mg,very thick,fill = back1] at (-0.33, -.7) {\fontfamily{pcr}\slshape\bfseries{#2}};
+	\node[rectangle][draw = mg,very thick,fill = back1] at (-1.05,-1.4) {\fontfamily{pcr}\slshape\bfseries{#3}};
 	
 \end{tikzpicture}
 }
@@ -229,11 +235,24 @@
 	\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 	\draw[fill=white,tg](0,\i) rectangle (\y,\i+0.4);
 	\node [above right ] at (0,\i+0.4) {\barx{\x}};
-	\node[above left] at (6.7,\i+0.4) {\barx{\z}};
+	\node[above left] at (6.2,\i+0.4) {\barx{\z}};
 }
 \end{tikzpicture}
 }
 
 %--------------------------------------------------------------------------------------------------------------
 % Computer graphics:
+\newcommand{\comgraph}[2]{
+\begin{tikzpicture}
+	
+	\node[rectangle][fill = mm,draw = mm,very thick] {\textcolor{white}{\fontfamily{pcr}\textbf{#1}}};
+	\node[rectangle][fill = mm,draw = mm,very thick] at (0.1, -0.7) {\textcolor{white}{\fontfamily{pcr}\textbf{#2}}};
+
+\end{tikzpicture}
+}
+
+
+
+
+
 
