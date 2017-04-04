@@ -4,6 +4,8 @@
 %--------------------------------------------------------------------------------------------------------------
 %Required Package: 
 
+\RequirePackage{tcolorbox}		%shape used in section
+\RequirePackage{amsmath}		%describing some math models
 \RequirePackage{marvosym}		% Telephone, email icon
 \RequirePackage{tikz}				% drawing package
 \RequirePackage{ragged2e}		% text alignment
@@ -92,7 +94,7 @@
 \pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
 
 \subsection{Language:}
-\par\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/5}}
+\par\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/4.7}}
 
 \subsection{Programming languages: }
 \par\hspace{14pt}\langraph
@@ -102,7 +104,7 @@
 \par\vspace{6pt}\hspace{6pt} \colorbox{mm}{   \fontfamily{pcr}\bfseries{\textcolor{white}{Piping system-AutoCAD Plant 3D}}}
 
 \subsection{Mechanical engineering:}
-\par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{AutoCAD}
+\par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{ANSYS}
 
 \subsection{Typography/Documents:}
 \par\typograph{{MS Word/Latex/4.5}}
@@ -112,19 +114,29 @@
 \par\hspace{6pt}\comgraph{Autodesk 3ds Max}{Adobe Illustrator}
 
 \subsection{Other tools:}
-\par\hspace{6pt} \fontfamily{pcr}\textup{VB /  Excel / PowerPoint}
-\par\hspace{6pt} \fontfamily{pcr}\textup{Mathematica / After Effects }
+\par\hspace{6pt} \fontfamily{pcr}\textup{MS Office / git / Netbeans}
+\par\hspace{6pt} \fontfamily{pcr}\textup{Mathematica / Visual Studio }
 
 \end{minipage}}%
 %
 \textcolor{pic}{\vline width 0.6mm}
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
+	\vspace{-24pt}
+	\section{Interests}
+	\vspace{-6pt}
+	\interest{Simulation of chemical manufacturing process }
+	{Controlling system of chemical process equipment, UAV}
+	{Algorithm of computer vision with OpenCV}
+
+	\vspace{-19pt}
+	\section{Education}
+
+	
+	\section{Experience}
 	
 	
-	
-	
-	
+	\section{Projects}
 		
 \end{minipage}%   
 }
@@ -220,7 +232,7 @@
 	
 	\node[rectangle][draw = mg,very thick,fill = back1] at (0,0){\fontfamily{pcr}\slshape\bfseries{#1}};
 	\node[rectangle][draw = mg,very thick,fill = back1] at (-0.33, -.7) {\fontfamily{pcr}\slshape\bfseries{#2}};
-	\node[rectangle][draw = mg,very thick,fill = back1] at (-1.05,-1.4) {\fontfamily{pcr}\slshape\bfseries{#3}};
+	\node[rectangle][draw = mg,very thick,fill = back1] at (-1.25,-1.4) {\fontfamily{pcr}\slshape\bfseries{#3}};
 	
 \end{tikzpicture}
 }
@@ -251,8 +263,29 @@
 \end{tikzpicture}
 }
 
+%--------------------------------------------------------------------------------------------------------------
+% Define the section style
+\renewcommand{\section}[1]{
+	\par\vspace{4pt}
+	{%
+	\begin{Large} \fontfamily{pcr}\textbf{\secbox{#1}} \end{Large}%
+	}
+	\par\vspace{4pt}%
+}
+\newcommand{\secbox}[1]{
+\begin{tcolorbox}[colframe=mainblue,colback = back2,boxrule=2pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,hbox]
+  	#1
+  \end{tcolorbox}
+}
 
+%--------------------------------------------------------------------------------------------------------------
+% showing interests:
+\newcommand{\interest}[3]{ 
 
+	\par \hspace{6pt} \textbullet \hspace{1pt} \fontfamily{pcr}\textup{#1}
+	\par \hspace{6pt} \textbullet \hspace{1pt} \fontfamily{pcr}\textup{#2}
+	\par \hspace{6pt} \textbullet \hspace{1pt} \fontfamily{pcr}\textup{#3}	
 
-
+}
 
