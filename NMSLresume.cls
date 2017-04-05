@@ -162,6 +162,7 @@
 	\vspace{-22pt}
 	\section{Projects}
 	\project
+	{Numerical solution}{Partial Differential Equation}{Fluid dynamics}{Python}
 	
 \end{minipage}%   
 }
@@ -341,7 +342,7 @@
  }
 %--------------------------------------------------------------------------------------------------------------
 %projects layout:
-\newcommand{\project}{
+\newcommand{\project}[4]{
 \parbox[t]{3.5cm}{
 	
 	
@@ -351,9 +352,10 @@
     \fill[green!30!white] (210:1) circle (1.6);
     \fill[blue!30!white]  (330:1) circle (1.6);
   \end{scope}
-
+	    \node  at (70:1.7) [text width=3cm]{#1};
+	    \node at (230:1.05) [text width = 3cm]{#2};
+	    \node at (340:1.85) [text width = 2cm] { #3};
+	    \node {\textbf{#4}};
 \end{tikzpicture}	
 }
-
-
 }
