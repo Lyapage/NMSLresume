@@ -77,7 +77,7 @@
 
 \newcommand{\rephone}[1]{ \Mobilefone:\fontfamily{pcr}\itshape{#1} }							%resume phone number
 
-\newcommand{\rewebsite}[1]{ \Mundus:\fontfamily{pcr}\itshape{#1}  }							%resume personal website
+\newcommand{\rewebsite}[1]{ \Mundus:\fontfamily{pcr}\itshape{\url{#1}}  }							%resume personal website
 
 					
 \newcommand{\pinfo}[5]{\par\noindent\colorbox{back2}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\vspace{6pt}
@@ -127,7 +127,7 @@
 	\section{Interests}
 	\vspace{-6pt}
 	\interest{Simulation of chemical manufacturing process }
-	{Controlling system of chemical process equipment, UAV}
+	{Controlling system of UAV,satellite and nonlinear theory}
 	{Algorithm of computer vision, computing aesthetics}
 
 	\vspace{-18pt}
@@ -138,12 +138,12 @@
 		{2015-2017}
 		{M.S The George Washington University}
 		{Specializing in design of mechanical system}
-		{Washington DC, USA}
+		{Washington DC,USA}
 	\eduitem
 		{2011-2015}
 		{B.S University of Science and Technology of China}
 		{Majoring in chemistry and chemical engineering}
-		{Hefei, China}
+		{Hefei,China}
 	\end{edu}
 	
 	
@@ -152,14 +152,16 @@
 	\vspace{-6pt}
 	
 	\expr{2016}{Intern Engineer}{SINOPEC Group}{Puguang China}
-	{Working for the project that Transmission of Natural Gas from Sichuan to Shanghai at Puguang compressor station.Being familiar with Daniel Measurement and Control system(Daniel Ultrasonic Meter, Danalyzer Gas Chromatographs Model 570/590/700 etc). Understanding the working mechanism of GE PCL503 centrifugal gas compressor, especially controlling system(UCP,DCS,MCC). Also, grasping PFD of each compressor station and HSE system of China Petrochemical Corp.}
+	{Working for the project that Transmission of Natural Gas from Sichuan to Shanghai at Puguang compressor station.Being familiar with Daniel Measurement and Control system(Daniel Ultrasonic Meter, Danalyzer Gas Chromatographs Model 570/590/700 series etc).Understanding the working mechanism of GE PCL503 centrifugal gas compressor, especially controlling system(UCP,DCS,MCC). Also, grasping PFD of each compressor station and HSE system of China Petrochemical Corp.\\
+\url{https://github.com/Lyapage/Intern}}
 	
 	\expr{2013}{Team member}{Chemitech}{Changzhou China}
-	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Serving as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, formulation of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.  }
+	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Serving as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, formulation of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.\\
+	\url{https://github.com/Lyapage/Chemitech/tree/master/simulation}}
 
 	\vspace{-22pt}
 	\section{Projects}
-
+	\project
 	
 \end{minipage}%   
 }
@@ -337,5 +339,21 @@
  \textbf{ \expt{#1},\expt{#2},\expt{#3},\expt{#4} } 
  \par\hspace{5pt}\parbox[t]{13cm}{ \expt{#5} } \newline
  }
+%--------------------------------------------------------------------------------------------------------------
+%projects layout:
+\newcommand{\project}{
+\parbox[t]{3.5cm}{
+	
+	
+	\begin{tikzpicture}
+  \begin{scope}[blend group = soft light]
+    \fill[red!30!white]   ( 90:1) circle (1.6);
+    \fill[green!30!white] (210:1) circle (1.6);
+    \fill[blue!30!white]  (330:1) circle (1.6);
+  \end{scope}
+
+\end{tikzpicture}	
+}
 
 
+}
