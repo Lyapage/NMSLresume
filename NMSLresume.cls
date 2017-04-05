@@ -123,7 +123,7 @@
 \textcolor{pic}{\vline width 0.6mm}
 \hspace{3pt}
   \begin{minipage}[t]{0.65\textwidth}
-	\vspace{-26pt}
+	\vspace{-24pt}
 	\section{Interests}
 	\vspace{-6pt}
 	\interest{Simulation of chemical manufacturing process }
@@ -150,10 +150,12 @@
 	\vspace{-32pt}
 	\section{Experience}
 	\vspace{-6pt}
+	
 	\expr{2016}{Intern Engineer}{SINOPEC Group}{Puguang China}
-	{Being familiar with the transmission process of the project Sichuan-Shanghai gas pipeline thoroughly. }
+	{Working for the project that Transmission of Natural Gas from Sichuan to Shanghai at Puguang compressor station.Being familiar with Daniel Measurement and Control system(Daniel Ultrasonic Meter, Danalyzer Gas Chromatographs Model 570/590/700 etc). Understanding the working mechanism of GE PCL503 centrifugal gas compressor, especially controlling system(UCP,DCS,MCC). Also, grasping PFD of each compressor station and HSE system of China Petrochemical Corp.}
+	
 	\expr{2013}{Team member}{Chemitech}{Changzhou China}
-	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Served as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, writing of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.  }
+	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Serving as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, formulation of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.  }
 
 	\vspace{-22pt}
 	\section{Projects}
