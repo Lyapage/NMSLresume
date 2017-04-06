@@ -163,7 +163,9 @@
 	\section{Projects}
 	\project
 	{Numerical solution}{Partial Differential Equation}{Fluid dynamics}{Python}
-	
+	{Starting from solving Burger's Eq with forward-central scheme.Then,Using the Crank-Nicolson scheme to solve 1D heat Eq and also proving its accuracy and convergence.Completing solution of 2D heat Eq with implicit method.Obtaining numerical solution of Poisson Eq and Laplace Eq with relaxation method.Applying Taha Scheme, Lax-Friedrichs scheme, Lax-Wndroff to solve hyperbolic PDEs.\\
+	\url{https://github.com/Lyapage/Numerical_sol}}
+	%
 \end{minipage}%   
 }
 
@@ -334,18 +336,19 @@
   }\\}
 
 %--------------------------------------------------------------------------------------------------------------
+%showing experience
 \newcommand{\expt}[1]{\fontfamily{pcr}\textup{#1}}
 \newcommand{\expr}[5]{
 	\par%
  \textbf{ \expt{#1},\expt{#2},\expt{#3},\expt{#4} } 
  \par\hspace{5pt}\parbox[t]{13cm}{ \expt{#5} } \newline
  }
+ 
 %--------------------------------------------------------------------------------------------------------------
 %projects layout:
-\newcommand{\project}[4]{
+\newcommand{\project}[5]{
 \parbox[t]{3.5cm}{
-	
-	
+	\vspace{-6pt}
 	\begin{tikzpicture}
   \begin{scope}[blend group = soft light]
     \fill[red!30!white]   ( 90:1) circle (1.6);
@@ -356,6 +359,16 @@
 	    \node at (230:1.05) [text width = 3cm]{#2};
 	    \node at (340:1.85) [text width = 2cm] { #3};
 	    \node {\textbf{#4}};
-\end{tikzpicture}	
-}
+\end{tikzpicture}%
+%
+}  \hspace{1.5cm} \parbox[t]{8.2cm}{\fontfamily{pcr}\textup{#5}}
+
+\parbox[t]{3.5cm}{
+	\vspace{0.5cm}
+	\begin{tikzpicture}
+ 		\node[circle][fill = red!65] {The second project};
+	\end{tikzpicture}%
+%
+}  \hspace{1.5cm} \parbox[t]{7.5cm}{\vspace{0.7cm} This isStarting from solving Burger's Eq with forward-central difference scheme.Then,Using the Crank-Nicolson scheme to solve 1D heat Eq and also proving its accuracy and convergence.Completing solution of 2D heat Eq with implicit method.Obtaining numerical solution of Poisson Eq and Laplace Eq with relaxation method.}
+
 }
