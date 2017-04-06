@@ -15,6 +15,7 @@
 \RequirePackage[absolute]{textpos}			%box absolute position
 \usetikzlibrary{shapes}
 \usetikzlibrary{arrows}
+\usetikzlibrary{trees,snakes}
 \usetikzlibrary{mindmap}
 \usetikzlibrary{decorations}
 \usetikzlibrary{positioning}
@@ -92,22 +93,22 @@
 %page layout below personal information box
 \newcommand{\binfo}{  \par\noindent\colorbox{back2}{\begin{minipage}[t][0.935\textheight]{0.33\textwidth}
 
-\pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in mechanical and aerospace engineering} }
+\pbox[c]{7cm}{\vspace{4pt}\reprogram{master of science in information management and processing} }
 
 \subsection{Language:}
-\par\lanskill{{Deutsch/2.5},{Mandarin/5.5},{English/4.7}}
+\par\lanskill{{English/2.5},{Turkish/5.5},{Dutch/4.7}}
 
 \subsection{Programming languages: }
 \par\hspace{14pt}\langraph
 
 \subsection{Chemical engineering: }
-\par\hspace{6pt}\chegraph{Aspen ONE}{Aspen\\Plus}{Aspen HYSYS}{Aspen Energy Analyzer}
+\par\hspace{6pt}\chegraph{Bspen ONE}{Bspen\\Plus}{Bspen HYSYS}{Bspen Energy Analyzer}
 \par\vspace{6pt}\hspace{6pt} \colorbox{mm}{   \fontfamily{pcr}\bfseries{\textcolor{white}{Piping system-AutoCAD Plant 3D}}}
 
 \subsection{Mechanical engineering:}
-\par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{ANSYS}
+\par\hspace{6pt}\megraph{Autodesk Inventor}{NX CAM Express}{Pro E}
 
-\subsection{Typography/Documents:}
+\subsection{Typography(Documents):}
 \par\typograph{{MS Word/Latex/4.5}}
 
 
@@ -126,9 +127,9 @@
 	\vspace{-24pt}
 	\section{Interests}
 	\vspace{-6pt}
-	\interest{Simulation of chemical manufacturing process }
-	{Controlling system of UAV,satellite and nonlinear theory}
-	{Algorithm of computer vision, computing aesthetics}
+	\interest{Writing comedy play for blissful couples}
+	{Oil painitng for memorial building }
+	{Photographing for skyscraper}
 
 	\vspace{-18pt}
 	\section{Education}
@@ -136,14 +137,14 @@
 	\begin{edu}
 	\eduitem
 		{2015-2017}
-		{M.S The George Washington University}
-		{Specializing in design of mechanical system}
-		{Washington DC,USA}
+		{M.S California Business management university}
+		{Specializing in information sharing}
+		{LA,USA}
 	\eduitem
 		{2011-2015}
-		{B.S University of Science and Technology of China}
-		{Majoring in chemistry and chemical engineering}
-		{Hefei,China}
+		{B.S Beijing film academy}
+		{Majoring in acting and directing}
+		{Beijing,China}
 	\end{edu}
 	
 	
@@ -151,20 +152,20 @@
 	\section{Experience}
 	\vspace{-6pt}
 	
-	\expr{2016}{Intern Engineer}{SINOPEC Group}{Puguang China}
-	{Working for the project that Transmission of Natural Gas from Sichuan to Shanghai at Puguang compressor station.Being familiar with Daniel Measurement and Control system(Daniel Ultrasonic Meter, Danalyzer Gas Chromatographs Model 570/590/700 series etc).Understanding the working mechanism of GE PCL503 centrifugal gas compressor, especially controlling system(UCP,DCS,MCC). Also, grasping PFD of each compressor station and HSE system of China Petrochemical Corp.\\
-\url{https://github.com/Lyapage/Intern}}
+	\expr{Summer 2016}{Intern xx}{xx Group}{xx China}
+	{Working for the project that Transmission of Natural Gas from xx to xx at xx compressor station.Being familiar with Daniel Measurement and Control system(Daniel Ultrasonic Meter, Danalyzer Gas Chromatographs Model 570/590/700 series etc).Understanding the working mechanism of GE PCL503 centrifugal gas compressor, especially controlling system(UCP,DCS,MCC). Also, grasping PFD of each compressor station and HSE system of China Petrochemical Corp.\\
+\url{www.4399.com}}
 	
-	\expr{2013}{Team member}{Chemitech}{Changzhou China}
+	\expr{Summer 2013}{Team member}{xx}{xx China}
 	{Leading by a chief engineer and working as a team to design a chemical plant which mainly manufactured 75,000 kg/hr of paraxylene(PX). Serving as a major member which is responsible for simulation of chemical process with Aspen Plus, layout of piping system, optimization of heat exchanger network, formulation of safety report, and design of corresponding chemical equipment like reactor, distillation column etc.\\
-	\url{https://github.com/Lyapage/Chemitech/tree/master/simulation}}
+	\url{www.tencent.com}}
 
 	\vspace{-22pt}
 	\section{Projects}
 	\project
 	{Numerical solution}{Partial Differential Equation}{Fluid dynamics}{Python}
-	{Starting from solving Burger's Eq with forward-central scheme.Then,Using the Crank-Nicolson scheme to solve 1D heat Eq and also proving its accuracy and convergence.Completing solution of 2D heat Eq with implicit method.Obtaining numerical solution of Poisson Eq and Laplace Eq with relaxation method.Applying Taha Scheme, Lax-Friedrichs scheme, Lax-Wndroff to solve hyperbolic PDEs.\\
-	\url{https://github.com/Lyapage/Numerical_sol}}
+	{Starting from solving Burger's Eq with forward-central scheme.Then,Using the Crank-Nicolson scheme to solve 1D heat Eq and also proving its accuracy and convergence.Completing solution of 2D heat Eq with implicit method.Obtaining numerical solution of Poisson Eq and Laplace Eq with relaxation method.Applying Lax-Friedrichs scheme, Lax-Wndroff scheme to solve hyperbolic PDEs.\\
+	\url{www.163.com}}
 	%
 \end{minipage}%   
 }
@@ -351,9 +352,9 @@
 	\vspace{-6pt}
 	\begin{tikzpicture}
   \begin{scope}[blend group = soft light]
-    \fill[red!30!white]   ( 90:1) circle (1.6);
-    \fill[green!30!white] (210:1) circle (1.6);
-    \fill[blue!30!white]  (330:1) circle (1.6);
+    \fill[red!50!white]   ( 90:1) circle (1.6);
+    \fill[green!40!white] (210:1) circle (1.6);
+    \fill[blue!20!white]  (330:1) circle (1.6);
   \end{scope}
 	    \node  at (70:1.7) [text width=3cm]{#1};
 	    \node at (230:1.05) [text width = 3cm]{#2};
@@ -363,12 +364,28 @@
 %
 }  \hspace{1.5cm} \parbox[t]{8.2cm}{\fontfamily{pcr}\textup{#5}}
 
-\parbox[t]{3.5cm}{
-	\vspace{0.5cm}
-	\begin{tikzpicture}
- 		\node[circle][fill = red!65] {The second project};
-	\end{tikzpicture}%
-%
-}  \hspace{1.5cm} \parbox[t]{7.5cm}{\vspace{0.7cm} This isStarting from solving Burger's Eq with forward-central difference scheme.Then,Using the Crank-Nicolson scheme to solve 1D heat Eq and also proving its accuracy and convergence.Completing solution of 2D heat Eq with implicit method.Obtaining numerical solution of Poisson Eq and Laplace Eq with relaxation method.}
+\proitem{Plasma research}{Micro- propulsion}{Dynamics of ions, electrons}{Stability of plasma jet engine}
+{Deriving Analytical solution with Feynman's lecture notes and then simulated via MATLAB. Attaining Numerical solution through leapfrog scheme followed by Python coding. Constructing Lyapunov function to measure the wave stability in plasma engine which based on in-homogeneous higher order Schr\"{o}dinger Eq model \\ 
+\url{www.sohu.com} }
 
 }
+
+
+\newcommand{\proitem}[5]{\parbox[t]{3.5cm}{
+	\vspace{0.5cm}
+	\begin{tikzpicture}[sibling distance=7.5em,
+  every node/.style = {shape=rectangle, rounded corners,
+    draw, align=center,text width = 2.2cm,
+    top color=white, bottom color=red!20}]]
+
+  \node {#1}
+		child {node{#2}
+			child{node {#3}}
+			child{node {#4}}
+		};
+
+\end{tikzpicture}
+}  \hspace{1.5cm} \parbox[t]{8.2cm}{\vspace{0.5cm}  \fontfamily{pcr}\textup{#5} }
+}
+
+
